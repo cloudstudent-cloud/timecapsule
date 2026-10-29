@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram id="timecapsule1" name="AWS Architecture">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="TimeCapsule | AWS EC2 Deployment — eu-central-1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=25;fontColor=#152945;" vertex="1" parent="1">
+          <mxGeometry x="30" y="15" width="1390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Website visitors&#10;HTTP :80" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf4ff;strokeColor=#668ac1;fontColor=#17263b;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="205" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Developer computer (Windows)&#10;git push + SSH deploy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf4ff;strokeColor=#668ac1;fontColor=#17263b;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="245" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="GitHub organization&#10;cloudstudent-cloud/timecapsule&#10;Public repository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2effb;strokeColor=#906db6;fontColor=#342950;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="320" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="AWS Cloud" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontColor=#344054;fontSize=14;strokeColor=#eea23b;" vertex="1" parent="1">
+          <mxGeometry x="675" y="80" width="735" height="770" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Region: Europe (Frankfurt) | eu-central-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontColor=#344054;fontSize=14;strokeColor=#e5a63b;" vertex="1" parent="1">
+          <mxGeometry x="700" y="125" width="680" height="685" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Default VPC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontColor=#344054;fontSize=14;strokeColor=#55a5ba;" vertex="1" parent="1">
+          <mxGeometry x="730" y="175" width="625" height="585" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Availability Zone: eu-central-1a" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontColor=#344054;fontSize=14;strokeColor=#8396bd;" vertex="1" parent="1">
+          <mxGeometry x="758" y="225" width="570" height="485" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Default subnet (public IPv4)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontColor=#344054;fontSize=14;strokeColor=#93abb4;" vertex="1" parent="1">
+          <mxGeometry x="787" y="275" width="515" height="385" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Security Group: launch-wizard-1&#10;Inbound SSH 22: My IP / HTTP 80: 0.0.0.0/0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontColor=#344054;fontSize=14;strokeColor=#49a36e;" vertex="1" parent="1">
+          <mxGeometry x="810" y="322" width="466" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Amazon EC2 t3.micro | webserver&#10;Amazon Linux 2023" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=10;fillColor=#fff5e7;strokeColor=#e39b36;strokeWidth=2;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="838" y="377" width="410" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="nginx :80" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf4ff;strokeColor=#668ac1;fontColor=#17263b;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="868" y="427" width="135" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="PHP-FPM 8.4&#10;Unix socket" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf4ff;strokeColor=#668ac1;fontColor=#17263b;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1068" y="427" width="145" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="PostgreSQL 16&#10;localhost :5432" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5ed;strokeColor=#49a36e;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="868" y="518" width="150" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="storage/uploads&#10;local EBS storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5ed;strokeColor=#49a36e;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1062" y="518" width="151" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="GitHub is outside AWS. All runtime services and uploaded files are on the same EC2 instance. Database port 5432 is not publicly exposed." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#bcc8d4;fontSize=13;fontColor=#344054;" vertex="1" parent="1">
+          <mxGeometry x="35" y="800" width="610" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="HTTP" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#45627e;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="3" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="git push HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#45627e;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="SSH :22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#45627e;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="4" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="git pull HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;dashed=1;strokeColor=#8154ba;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="12" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="FastCGI" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#45627e;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="13" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="SQL" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#45627e;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="14" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Read/write" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#45627e;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="14" target="16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
