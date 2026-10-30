@@ -86,6 +86,5 @@ $navLink = function (string $key, string $href, string $label) use ($nav): strin
   </div>
   <p>Developed by TAKED-OS | Deployment Test V3</p>
 </footer>
-<?php broken(
 </body>
 </html>
